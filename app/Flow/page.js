@@ -23,7 +23,7 @@ function FlowPage() {
              {/* Hover Glow Effect */}
              <div className="absolute inset-0 bg-orange-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
              
-             <div className="relative h-full" style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))" }}>
+             <div className="relative h-full p-px" style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))" }}>
                 {/* Border Layer - Absolute behind content */}
                 <div
                   className="absolute inset-0 bg-white/20 group-hover:bg-orange-500/50 transition-colors duration-300"
@@ -34,8 +34,7 @@ function FlowPage() {
                 <div
                   className="relative bg-[#0A090F] p-8 flex flex-col h-full"
                   style={{ 
-                    clipPath: cardClipPath,
-                    margin: '1px'
+                    clipPath: cardClipPath
                   }}
                 >
                     <div className="flex items-center gap-4 mb-6">
@@ -52,7 +51,7 @@ function FlowPage() {
                         Prove your worth. Submit a game-changing SaaS concept to secure your deployment in the finals.
                     </p>
 
-                    <div className="space-y-4 mb-6 flex-grow font-sans text-sm">
+                    <div className="space-y-4 mb-6 grow font-sans text-sm">
                          <div className="mb-4 text-white/90">
                             <span className="text-orange-500 font-bold">Eligibility:</span> Teams of 2-4 members. Open to students from any branch and any college.
                          </div>
@@ -90,7 +89,7 @@ function FlowPage() {
           <div className="relative w-full max-w-md lg:w-1/2 flex-1 group">
              <div className="absolute inset-0 bg-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-             <div className="relative h-full" style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))" }}>
+             <div className="relative h-full p-px" style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))" }}>
                 <div
                   className="absolute inset-0 bg-white/20 group-hover:bg-blue-500/50 transition-colors duration-300"
                   style={{ clipPath: cardClipPath }}
@@ -99,8 +98,7 @@ function FlowPage() {
                 <div
                   className="relative bg-[#0A090F] p-8 flex flex-col h-full"
                   style={{ 
-                    clipPath: cardClipPath,
-                    margin: '1px'
+                    clipPath: cardClipPath
                   }}
                 >
                     <div className="flex items-center gap-4 mb-6">
@@ -123,7 +121,10 @@ function FlowPage() {
                          <li className="flex gap-2 items-center"><span className="text-orange-500">■</span> Mentor Access & High-Speed Net</li>
                     </ul>
 
-                    <div className="space-y-3 mb-8 flex-grow font-sans text-sm border-t border-white/10 pt-4">
+                    <div className="space-y-3 mb-8 grow font-sans text-sm border-t border-white/10 pt-4">
+                        <div className="mb-4 text-white/90">
+                           <span className="text-orange-500 font-bold">Registration Fee:</span> ₹500 per team (Only for shortlisted teams).
+                        </div>
                         <p className="font-semibold text-white uppercase tracking-wide">Rewards:</p>
                         <ul className="space-y-2 text-white/70">
                              <li className="flex gap-2 items-start">

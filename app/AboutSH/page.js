@@ -89,8 +89,8 @@ export default function page() {
                 
                 {/* Caption */}
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    <p className="text-orange-500 font-mono text-sm tracking-[0.3em] uppercase mb-2">The Team</p>
-                    <h3 className="text-white font-display text-2xl uppercase">Behind The Innovation</h3>
+                    <p className="text-orange-500 font-mono text-sm tracking-[0.3em] uppercase mb-2 font-bold">The Team</p>
+                    <h3 className="text-white font-display text-2xl uppercase font-bold">Behind The Innovation</h3>
                 </div>
              </div>
         </div>
