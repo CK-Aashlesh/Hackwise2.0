@@ -69,4 +69,4 @@ Contributions are welcome! Please fork the repo and create a pull request for an
 This project is licensed under the MIT License.
 
 ---
-*Built with ❤️ by Sphere Hive Tech Team.*
+*Built with ❤️ by Sphere Hive.*
