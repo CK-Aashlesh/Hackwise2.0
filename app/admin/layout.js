@@ -59,9 +59,15 @@ export default function AdminLayout({ children }) {
 
         <div className="p-4 border-t border-white/10">
           <button 
-             onClick={() => {
-               document.cookie = 'admin_session=; Max-Age=0; path=/;';
-               window.location.href = '/admin/login';
+             onClick={async () => {
+               try {
+                 await fetch('/api/admin/logout', { method: 'POST' });
+                 window.location.href = '/admin/login';
+               } catch (error) {
+                 console.error('Logout failed:', error);
+                 // Fallback to client-side redirect if API fails
+                 window.location.href = '/admin/login';
+               }
              }}
              className="flex items-center gap-3 px-4 py-3 w-full text-left text-white/60 hover:text-red-500 hover:bg-red-500/10 rounded transition-colors"
           >
