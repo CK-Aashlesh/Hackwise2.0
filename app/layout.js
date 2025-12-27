@@ -91,7 +91,7 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
+  youtube: {
     card: "summary_large_image",
     title: "Hackwise 2.0",
     description: "Empowering the next wave of innovators.",

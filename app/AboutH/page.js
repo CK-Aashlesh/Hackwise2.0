@@ -42,7 +42,7 @@ function AboutPage() {
                     </p>
 
                     <p>
-                        Powered by <span className="text-white font-bold">Sphere Hive</span> at <span className="text-white font-bold">KVG College of Engineering</span> on <span className="text-orange-500 font-bold">4 & 5 April 2026</span>, this 24-hour sprint challenges you to forge solutions that don't just work - they change the game.
+                        Hosted by <span className="text-white font-bold">Sphere Hive</span> at <span className="text-white font-bold">KVG College of Engineering</span> on <span className="text-orange-500 font-bold">4 & 5 April 2026</span>, this 24-hour sprint challenges you to forge solutions that don't just work - they change the game.
                     </p>
 
                     <p>

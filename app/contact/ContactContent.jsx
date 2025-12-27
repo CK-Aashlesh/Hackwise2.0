@@ -122,7 +122,7 @@ export default function ContactContent() {
                     {[
                       { icon: "ri-instagram-line", link: "https://www.instagram.com/spherehive" },
                       { icon: "ri-linkedin-fill", link: "https://www.linkedin.com/company/spherehive/" },
-                      { icon: "ri-twitter-x-fill", link: "https://twitter.com" },
+                      { icon: "ri-youtube-fill", link: "https://www.youtube.com/@spherehive" },
                       { icon: "ri-global-line", link: "https://spherehive.in/" },
                     ].map((social, i) => (
                       <a 

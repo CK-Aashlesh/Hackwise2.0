@@ -3,6 +3,7 @@ import DecryptedText from "../components/DecryptedText.jsx";
 
 function FlowPage() {
   const cardClipPath = "polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px)";
+  const btnClipPath = "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)";
 
   return (
     <section className="section-container border-t border-white/10 pb-32">
@@ -77,9 +78,21 @@ function FlowPage() {
                         href="https://unstop.com/o/XIlFdnH?lb=yGGr6gxO&utm_medium=Share&utm_source=muhamr70994&utm_campaign=Online_coding_challenge" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="w-full py-3 block text-center text-white font-sans border border-orange-500/50 hover:border-orange-500 bg-white/5 hover:bg-orange-500/10 transition-all duration-300 rounded-sm cursor-pointer"
+                        className="relative w-full block group cursor-pointer"
                     >
-                        <DecryptedText text="Register on Unstop" sequential />
+                        <div 
+                            className="absolute inset-0 bg-orange-500/50 group-hover:bg-orange-500 transition-colors duration-300"
+                            style={{ clipPath: btnClipPath }}
+                        />
+                        <div 
+                            className="relative bg-[#0A090F] m-[1px] py-3 text-center transition-all duration-300"
+                            style={{ clipPath: btnClipPath }}
+                        >
+                            <div className="absolute inset-0 bg-white/5 group-hover:bg-orange-500/10 transition-colors duration-300" />
+                            <span className="relative text-white font-sans">
+                                <DecryptedText text="Register on Unstop" sequential />
+                            </span>
+                        </div>
                     </a>
                 </div>
              </div>
@@ -142,9 +155,21 @@ function FlowPage() {
                         href="https://unstop.com/o/XIlFdnH?lb=yGGr6gxO&utm_medium=Share&utm_source=muhamr70994&utm_campaign=Online_coding_challenge" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="w-full py-3 block text-center text-white font-sans border border-orange-500/50 hover:border-orange-500 bg-white/5 hover:bg-orange-500/10 transition-all duration-300 rounded-sm cursor-pointer"
+                        className="relative w-full block group cursor-pointer"
                     >
-                        <DecryptedText text="View Details" sequential />
+                        <div 
+                            className="absolute inset-0 bg-orange-500/50 group-hover:bg-orange-500 transition-colors duration-300"
+                            style={{ clipPath: btnClipPath }}
+                        />
+                        <div 
+                            className="relative bg-[#0A090F] m-[1px] py-3 text-center transition-all duration-300"
+                            style={{ clipPath: btnClipPath }}
+                        >
+                            <div className="absolute inset-0 bg-white/5 group-hover:bg-orange-500/10 transition-colors duration-300" />
+                            <span className="relative text-white font-sans">
+                                <DecryptedText text="View Details" sequential />
+                            </span>
+                        </div>
                     </a>
                 </div>
              </div>
