@@ -58,8 +58,9 @@ const Sponsors = () => {
           </div>
 
           <div className="mt-16 text-center">
-             <p className="text-white/60 font-sans mb-4">Interested in sponsoring HackWise 2.0?</p>
+             <p className="text-white/60 font-sans mb-4">Interested in sponsoring Hackwise 2.0?</p>
              <button 
+               href="/contact"
                 className="px-8 py-3 bg-orange-500 text-black font-mono font-bold hover:bg-orange-600 transition-all duration-300 rounded-none cursor-pointer shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)]"
                 style={{
                     clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)"

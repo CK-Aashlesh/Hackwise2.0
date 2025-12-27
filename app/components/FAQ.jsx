@@ -123,7 +123,7 @@ const FAQModal = ({ isOpen, onClose, faqs }) => {
 
                 <div className="mt-8 pt-6 border-t border-white/10 text-center">
                     <p className="text-white/40 text-sm font-mono">
-                        Still have questions? <a href="mailto:spherehive@kvgce.edu" className="text-orange-500 hover:underline">Contact Us</a>
+                        Still have questions? <a href="/contact" className="text-orange-500 hover:underline">Contact Us</a>
                     </p>
                 </div>
               </div>
@@ -138,39 +138,31 @@ const FAQModal = ({ isOpen, onClose, faqs }) => {
 
 const FAQ = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [faqs, setFaqs] = useState([]);
 
-  const faqs = [
-    {
-      question: "Who can participate?",
-      answer:
-        "Hackwise 2.0 is open to all students and innovators from any college or university. Whether you're a beginner or an expert, if you have a passion for building, you're welcome!",
-    },
-    {
-      question: "Is there a registration fee?",
-      answer:
-        "No, participation in Hackwise 2.0 is completely free. We believe in making innovation accessible to everyone.",
-    },
-    {
-      question: "What is the team size?",
-      answer:
-        "You can participate individually or in a team of up to 4 members. We encourage forming diverse teams to tackle problems effectively.",
-    },
-    {
-      question: "Will food and accommodation be provided?",
-      answer:
-        "Yes! We will provide food, refreshments, and a comfortable space for hacking throughout the 24-hour event. Accommodation details for outstation participants will be shared soon.",
-    },
-    {
-      question: "Do I need to have a project idea beforehand?",
-      answer:
-        "Not necessarily. While it helps to have an idea, you can also brainstorm and finalize your concept after the problem statements are revealed or during the hacking phase.",
-    },
-    {
-      question: "What should I bring?",
-      answer:
-        "Bring your laptop, charger, any necessary hardware, toiletries, and a valid college ID. Don't forget your enthusiasm and coding spirit!",
-    },
-  ];
+  useEffect(() => {
+    // Fetch FAQs from API
+    fetch('/api/faq')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          setFaqs(data);
+        } else {
+            // Fallback content if DB is empty
+            setFaqs([
+                {
+                  question: "Who can participate?",
+                  answer: "Hackwise 2.0 is open to all students and innovators from any college or university. Whether you're a beginner or an expert, if you have a passion for building, you're welcome!",
+                },
+                // ... keep other fallbacks if desired, or just show empty
+            ]);
+        }
+      })
+      .catch(err => console.error("Failed to load FAQs", err));
+  }, []);
+
+  // Only show section if we have FAQs (or fallback)
+  if (faqs.length === 0) return null;
 
   return (
     <>
@@ -194,15 +186,21 @@ const FAQ = () => {
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="group relative px-8 py-3 bg-white/5 border border-white/20 hover:border-orange-500/50 hover:bg-orange-500/10 transition-all duration-300"
+            className="group relative inline-flex items-center justify-center p-px bg-white/20 hover:bg-orange-500/50 transition-colors duration-300 overflow-hidden"
             style={{
               clipPath: "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)"
             }}
           >
-            <span className="relative z-10 font-mono text-orange-500 uppercase tracking-widest text-sm group-hover:text-white transition-colors">
-              View Questions
-            </span>
-            <div className="absolute inset-0 bg-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 -z-0" />
+             <div 
+               className="relative px-8 py-3 bg-[#0A090F] group-hover:bg-[#0A090F]/90 transition-colors w-full h-full"
+               style={{
+                clipPath: "polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px)"
+               }}
+             >
+                <span className="relative z-10 font-mono text-orange-500 uppercase tracking-widest text-sm group-hover:text-white transition-colors">
+                  View Questions
+                </span>
+             </div>
           </button>
         </div>
       </section>

@@ -20,7 +20,6 @@ const Navbar = () => {
   const navLinks = [
     { name: "About", id: "about" },
     { name: "Flow", id: "flow" },
-    { name: "Timeline", id: "timeline" },
     { name: "Prizes", id: "prizes" },
     { name: "Sponsors", id: "sponsors" },
     { name: "FAQ", id: "faq" },
@@ -79,10 +78,16 @@ const Navbar = () => {
               ))}
               {/* New Accommodation Link */}
               <Link
-                href="/Accommodation"
+                href="/accommodation"
                 className="font-mono text-sm text-white/70 hover:text-orange-500 transition-colors uppercase tracking-wider"
               >
                 Accommodation
+              </Link>
+              <Link
+                href="/contact"
+                className="font-mono text-sm text-white/70 hover:text-orange-500 transition-colors uppercase tracking-wider"
+              >
+                Contact
               </Link>
             </div>
 
@@ -117,11 +122,18 @@ const Navbar = () => {
               </a>
             ))}
             <Link
-                href="/Accommodation"
+                href="/accommodation"
                 onClick={() => setIsOpen(false)}
                 className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase"
             >
                 Accommodation
+            </Link>
+            <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase"
+            >
+                Contact
             </Link>
             <button className="w-full py-3 mt-2 border border-orange-500 bg-orange-500 text-black font-bold font-mono uppercase">
               Register Now

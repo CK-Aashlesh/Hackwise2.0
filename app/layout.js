@@ -1,10 +1,12 @@
 import { Geist, Geist_Mono, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import Background from "./components/Background";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Loader from "./components/Loader";
+import ClientLayout from "./components/ClientLayout";
 import { Roboto_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import AnalyticsTracker from "./components/AnalyticsTracker";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,7 +76,7 @@ export const metadata = {
     apple: "/assets/logo.png",
   },
   openGraph: {
-    title: "Hackwise 2.0 | National Level SaaS Hackathon",
+    title: "Hackwise 2.0 | National Level Hackathon",
     description:
       "Empowering the next wave of innovators. Join us at KVGCE for a 24-hour coding sprint.",
     siteName: "Hackwise 2.0",
@@ -108,19 +110,18 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} ${spaceGrotesk.variable} ${inter.variable} font-sans antialiased relative bg-[#0A090F] text-white overflow-x-hidden`}
         suppressHydrationWarning
       >
+        <Loader />
         {/* Background for ALL pages */}
         <Background />
 
-        {/* Global Navbar */}
-        <Navbar />
-
-        {/* Page content */}
-        <main className="relative z-10 flex flex-col items-center w-full">
-        {children}
-        </main>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
         
-        <Footer />
         <Analytics />
+        <Suspense fallback={null}>
+          <AnalyticsTracker />
+        </Suspense>
       </body>
     </html>
   );

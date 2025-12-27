@@ -1,48 +1,57 @@
+"use client";
 import React from "react";
-import Link from "next/link";
-import { Hammer } from "lucide-react";
+import DecryptedText from "../components/DecryptedText";
 
-export default function AccommodationPage() {
+export default function Accommodation() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[80vh] w-full relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[100px] -z-10" />
-
-      {/* Content */}
-      <div className="relative z-10 text-center space-y-8 px-4">
-        {/* Animated Icon */}
-        <div className="w-24 h-24 mx-auto border border-orange-500/30 bg-orange-500/5 rounded-full flex items-center justify-center relative overflow-hidden group">
-          <div className="absolute inset-0 bg-orange-500/10 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-full" />
-          <Hammer className="w-10 h-10 text-orange-500 animate-pulse" />
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 md:px-12 lg:px-24">
+      
+      <div className="text-center relative z-10">
+        <div className="inline-flex items-center gap-2 mb-6 justify-center">
+          <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+          <span className="font-mono text-sm text-orange-500 uppercase tracking-widest">
+            Stay Tuned
+          </span>
         </div>
+        
+        <h1 className="font-hackwise text-4xl md:text-6xl lg:text-8xl text-white tracking-wide uppercase mb-6">
+          COMING <span className="text-orange-500">SOON</span>
+        </h1>
+        
+        <p className="text-white/60 font-mono text-lg md:text-xl max-w-2xl mx-auto mb-12">
+          We are finalizing the accommodation arrangements for Hackwise 2.0. 
+          <br className="hidden md:block"/>
+          Details regarding stay and logistics will be updated shortly.
+        </p>
 
-        {/* Text Content */}
-        <div className="space-y-4 max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-hackwise text-white uppercase tracking-wider">
-            Coming Soon
-          </h1>
-          <p className="font-mono text-white/60 text-lg md:text-xl">
-            Accommodation details are being finalized.
-            <br />
-            Stay tuned for updates!
-          </p>
-        </div>
+        <div 
+            className="relative inline-block group"
+            style={{ clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)" }}
+        >
+             {/* Border Layer */}
+             <div className="absolute inset-0 bg-orange-500/50 group-hover:bg-orange-500 transition-colors duration-300" />
+             
+             <div 
+                className="relative bg-[#0A090F] px-8 py-4 m-[1px] w-[calc(100%-2px)] h-[calc(100%-2px)] flex items-center justify-center backdrop-blur-md"
+                style={{ 
+                    clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)"
+                }}
+             >
+                 {/* Tint Layer */}
+                 <div className="absolute inset-0 bg-orange-500/10 transition-colors duration-300" />
 
-        {/* Back Button */}
-        <div className="pt-8">
-          <Link
-            href="/"
-            className="inline-block px-8 py-3 border border-white/20 hover:border-orange-500 hover:bg-orange-500/10 text-white font-mono uppercase tracking-widest text-sm transition-all duration-300"
-            style={{
-              clipPath:
-                "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
-            }}
-          >
-            Return Home
-          </Link>
+                 <div className="relative z-10 text-center w-full flex justify-center">
+                    <DecryptedText 
+                        text="SYSTEM.UPDATE_PENDING..." 
+                        speed={80} 
+                        className="text-orange-500 font-mono tracking-widest text-sm md:text-base inline-block text-center"
+                    />
+                 </div>
+             </div>
         </div>
       </div>
-    </div>
+
+    </section>
   );
 }
 
