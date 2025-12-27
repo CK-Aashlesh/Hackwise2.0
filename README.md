@@ -32,7 +32,7 @@
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/hackwise2.0.git
+    git clone https://github.com/CK-Aashlesh/Hackwise2.0.git
     cd hackwise2.0
     ```
 
