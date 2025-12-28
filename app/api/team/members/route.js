@@ -30,7 +30,8 @@ export async function POST(request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ error: 'Database error' }, { status: 500 });
+    console.error('Add member error:', error);
+    return NextResponse.json({ error: error.message || 'Database error' }, { status: 500 });
   }
 }
 
