@@ -76,7 +76,11 @@ const Navbar = () => {
                   href={isHomePage ? `#${link.id}` : `/#${link.id}`}
                   className="font-mono text-sm text-white/70 hover:text-orange-500 transition-colors uppercase tracking-wider group"
                 >
-                  <DecryptedText text={link.name} speed={30} className="group-hover:text-orange-500 transition-colors" />
+                  <DecryptedText
+                    text={link.name}
+                    speed={30}
+                    className="group-hover:text-orange-500 transition-colors"
+                  />
                 </a>
               ))}
               {/* New Accommodation Link */}
@@ -84,13 +88,21 @@ const Navbar = () => {
                 href="/accommodation"
                 className="font-mono text-sm text-white/70 hover:text-orange-500 transition-colors uppercase tracking-wider group"
               >
-                 <DecryptedText text="Accommodation" speed={30} className="group-hover:text-orange-500 transition-colors" />
+                <DecryptedText
+                  text="Accommodation"
+                  speed={30}
+                  className="group-hover:text-orange-500 transition-colors"
+                />
               </Link>
               <Link
                 href="/contact"
                 className="font-mono text-sm text-white/70 hover:text-orange-500 transition-colors uppercase tracking-wider group"
               >
-                 <DecryptedText text="Contact" speed={30} className="group-hover:text-orange-500 transition-colors" />
+                <DecryptedText
+                  text="Contact"
+                  speed={30}
+                  className="group-hover:text-orange-500 transition-colors"
+                />
               </Link>
             </div>
 
@@ -102,16 +114,18 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="hidden md:block group relative p-px bg-orange-500/50 font-mono text-sm text-orange-500 transition-all duration-300"
                 style={{
-                  clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)"
+                  clipPath:
+                    "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
                 }}
               >
                 <div
                   className="w-full h-full bg-[#0A090F] px-6 py-2 flex items-center justify-center"
                   style={{
-                    clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)"
+                    clipPath:
+                      "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)",
                   }}
                 >
-                  <DecryptedText text="Register" sequential speed={30} className="group-hover:text-orange-400 transition-colors" />
+                  <DecryptedText text="Register" sequential speed={30} />
                 </div>
               </a>
 
@@ -136,24 +150,36 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase group"
               >
-                <DecryptedText text={link.name} speed={30} className="group-hover:text-orange-500 transition-colors" />
+                <DecryptedText
+                  text={link.name}
+                  speed={30}
+                  className="group-hover:text-orange-500 transition-colors"
+                />
               </a>
             ))}
             <Link
-                href="/accommodation"
-                onClick={() => setIsOpen(false)}
-                className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase group"
+              href="/accommodation"
+              onClick={() => setIsOpen(false)}
+              className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase group"
             >
-                <DecryptedText text="Accommodation" speed={30} className="group-hover:text-orange-500 transition-colors" />
+              <DecryptedText
+                text="Accommodation"
+                speed={30}
+                className="group-hover:text-orange-500 transition-colors"
+              />
             </Link>
             <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase group"
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="font-mono text-lg text-white/80 hover:text-orange-500 transition-colors uppercase group"
             >
-                <DecryptedText text="Contact" speed={30} className="group-hover:text-orange-500 transition-colors" />
+              <DecryptedText
+                text="Contact"
+                speed={30}
+                className="group-hover:text-orange-500 transition-colors"
+              />
             </Link>
-            <a 
+            <a
               href="https://unstop.com/o/XIlFdnH?lb=yGGr6gxO&utm_medium=Share&utm_source=muhamr70994&utm_campaign=Online_coding_challenge"
               target="_blank"
               rel="noopener noreferrer"
@@ -169,4 +195,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

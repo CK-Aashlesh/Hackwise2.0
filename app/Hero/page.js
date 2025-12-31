@@ -10,7 +10,7 @@ export default function Home() {
           {/* Left Column: Text */}
           <div className="flex flex-col gap-6 lg:gap-8 order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 mb-[-10px]">
-              <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               <span className="font-mono text-sm md:text-base text-orange-500 uppercase tracking-widest">
                 Hosted by <b>Sphere Hive</b>
               </span>
@@ -40,7 +40,7 @@ export default function Home() {
                     <DecryptedText
                       text="Register on Unstop"
                       sequential
-                      speed={40}
+                      speed={60}
                     />
                   </a>
 
@@ -64,7 +64,7 @@ export default function Home() {
                       <DecryptedText
                         text="Join WhatsApp"
                         sequential
-                        speed={40}
+                        speed={60}
                       />
                       <i className="ri-whatsapp-line text-xl" />
                     </div>
@@ -115,9 +115,19 @@ export default function Home() {
         </div>
 
         {/* Social Sidebar - Fixed Right */}
-        <div className="absolute top-1/2 -translate-y-1/2 right-0 hidden lg:flex flex-col gap-0 z-20 border border-white/10 bg-black/80 backdrop-blur-sm">
+        <div className="absolute top-1/2 -translate-y-1/2 right-0 hidden lg:flex flex-col z-20 border border-white/10 bg-black/80 backdrop-blur-sm">
           {/* Top Box */}
-          <div className="w-12 h-12 flex items-center justify-center border-b border-white/10">
+          <div
+            className="
+      w-12 h-12 flex items-center justify-center
+      border-b border-white/10
+      text-white/60
+      hover:bg-white/5
+      hover:text-orange-500
+      hover:border-orange-500/50
+      transition-all duration-300
+    "
+          >
             <i className="ri-donut-chart-fill text-orange-500 text-xl" />
           </div>
 
@@ -141,11 +151,24 @@ export default function Home() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block group"
+              className="group"
             >
-              <div className="w-12 h-12 flex items-center justify-center border-t border-white/10 hover:bg-white transition-colors duration-300 cursor-pointer">
+              <div
+                className="
+          w-12 h-12 flex items-center justify-center
+          border border-white/10
+          text-white/60
+          hover:bg-white/5
+          hover:border-orange-500/50
+          transition-all duration-300
+          cursor-pointer"
+              >
                 <i
-                  className={`${icon} text-white/70 text-xl transition-colors duration-300 group-hover:text-black`}
+                  className={`
+            ${icon} text-xl
+            transition-colors duration-300
+            group-hover:text-orange-500
+          `}
                 />
               </div>
             </a>
