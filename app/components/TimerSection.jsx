@@ -2,7 +2,7 @@ import React from "react";
 import CountdownTimer from "./CountdownTimer";
 
 const TimerSection = () => {
-  // Set target date to January 21, 2026
+  // Set target date to February 28, 2026
   const targetDate = new Date("2026-02-28T11:11:11");
 
   return (
